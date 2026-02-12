@@ -118,8 +118,14 @@ class SearchConfiguration {
   /// Text color for search input
   final Color? searchBarTextColor;
 
+  /// Text style for search input
+  final TextStyle? searchBarTextStyle;
+
   /// Color of search hint text
   final Color? searchBarHintColor;
+
+  /// Text style for search hint text
+  final TextStyle? searchBarHintTextStyle;
 
   /// Border radius for search bar container
   final BorderRadiusGeometry? searchbarBorderRadius;
@@ -208,7 +214,8 @@ class SearchConfiguration {
       searchBarTextColor: searchBarTextColor ?? this.searchBarTextColor,
       searchBarHintColor: searchBarHintColor ?? this.searchBarHintColor,
       searchBarTextStyle: searchBarTextStyle ?? this.searchBarTextStyle,
-      searchBarHintTextStyle: searchBarHintTextStyle ?? this.searchBarHintTextStyle,
+      searchBarHintTextStyle:
+          searchBarHintTextStyle ?? this.searchBarHintTextStyle,
       searchbarBorderRadius:
           searchbarBorderRadius ?? this.searchbarBorderRadius,
       searchbarDebounceDuration:
