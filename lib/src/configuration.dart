@@ -167,6 +167,8 @@ class SearchConfiguration {
     this.searchBarBackgroundColor,
     this.searchBarTextColor,
     this.searchBarHintColor,
+    this.searchBarTextStyle,
+    this.searchBarHintTextStyle,
     this.searchbarBorderRadius,
     this.searchbarDebounceDuration,
     this.maxSearchResults = 5,
@@ -185,6 +187,8 @@ class SearchConfiguration {
     Color? searchBarBackgroundColor,
     Color? searchBarTextColor,
     Color? searchBarHintColor,
+    TextStyle? searchBarTextStyle,
+    TextStyle? searchBarHintTextStyle,
     BorderRadiusGeometry? searchbarBorderRadius,
     Duration? searchbarDebounceDuration,
     int? maxSearchResults,
@@ -203,6 +207,8 @@ class SearchConfiguration {
           searchBarBackgroundColor ?? this.searchBarBackgroundColor,
       searchBarTextColor: searchBarTextColor ?? this.searchBarTextColor,
       searchBarHintColor: searchBarHintColor ?? this.searchBarHintColor,
+      searchBarTextStyle: searchBarTextStyle ?? this.searchBarTextStyle,
+      searchBarHintTextStyle: searchBarHintTextStyle ?? this.searchBarHintTextStyle,
       searchbarBorderRadius:
           searchbarBorderRadius ?? this.searchbarBorderRadius,
       searchbarDebounceDuration:
