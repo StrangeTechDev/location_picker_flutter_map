@@ -705,8 +705,10 @@ class _FlutterLocationPickerState extends State<FlutterLocationPicker>
           showSearchBar: widget.showSearchBar,
           searchBarBackgroundColor: widget.searchBarBackgroundColor,
           searchBarTextColor: widget.searchBarTextColor,
+          searchBarTextStyle: widget.searchConfiguration?.searchBarTextStyle?.copyWith(color: widget.searchBarTextColor) ?? TextStyle(color: widget.searchBarTextColor),
           searchBarHintText: widget.searchBarHintText,
           searchBarHintColor: widget.searchBarHintColor,
+          searchBarHintTextStyle: widget.searchConfiguration?.searchBarHintTextStyle?.copyWith(color: widget.searchBarHintColor) ?? TextStyle(color: widget.searchBarHintColor),
           searchbarInputBorder: widget.searchbarInputBorder,
           searchbarInputFocusBorder: widget.searchbarInputFocusBorderp,
           searchbarBorderRadius: widget.searchbarBorderRadius,
@@ -717,8 +719,10 @@ class _FlutterLocationPickerState extends State<FlutterLocationPicker>
           showSearchBar: widget.showSearchBar ?? true,
           searchBarBackgroundColor: widget.searchBarBackgroundColor,
           searchBarTextColor: widget.searchBarTextColor,
+          searchBarTextStyle: TextStyle(color: widget.searchBarTextColor),
           searchBarHintText: widget.searchBarHintText ?? 'Search location',
           searchBarHintColor: widget.searchBarHintColor,
+          searchBarHintTextStyle: TextStyle(color: widget.searchBarHintColor),
           searchbarInputBorder: widget.searchbarInputBorder,
           searchbarInputFocusBorder: widget.searchbarInputFocusBorderp,
           searchbarBorderRadius: widget.searchbarBorderRadius,
@@ -1133,7 +1137,7 @@ class _FlutterLocationPickerState extends State<FlutterLocationPicker>
               textDirection: _isRTL(_searchController.text)
                   ? TextDirection.rtl
                   : TextDirection.ltr,
-              style: TextStyle(color: _searchConfig.searchBarTextColor),
+              style: _searchConfig.searchBarTextStyle,
               controller: _searchController,
               focusNode: _focusNode,
               decoration: InputDecoration(
@@ -1143,7 +1147,7 @@ class _FlutterLocationPickerState extends State<FlutterLocationPicker>
                     : TextDirection.ltr,
                 border: inputBorder,
                 focusedBorder: inputFocusBorder,
-                hintStyle: TextStyle(color: _searchConfig.searchBarHintColor),
+                hintStyle: _searchConfig.searchBarHintTextStyle),
                 suffixIcon: IconButton(
                   onPressed: () {
                     _searchController.clear();
