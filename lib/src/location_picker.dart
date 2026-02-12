@@ -1099,7 +1099,7 @@ class _FlutterLocationPickerState extends State<FlutterLocationPicker>
             ),
             title: Text(
               _searchOptions[index].displayname,
-              style: TextStyle(color: _searchConfig.searchBarTextColor),
+              style: _searchConfig.searchBarTextStyle,
             ),
             onTap: () {
               _handleSearchResultTap(_searchOptions[index]);
